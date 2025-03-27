@@ -15,18 +15,19 @@ sudo apt update && sudo apt upgrade -y
 
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 
-source $HOME/.cargo/env
+source "$HOME/.cargo/env"
+
 
 rustc --version
-
 cargo --version
 
-echo 'source $HOME/.cargo/env' >> ~/.bashrc
-source ~/.bashrc
+
+if ! grep -q "source \$HOME/.cargo/env" "$HOME/.bashrc"; then
+    echo 'source $HOME/.cargo/env' >> "$HOME/.bashrc"
+fi
+
 
 curl -sSL https://raw.githubusercontent.com/soundnesslabs/soundness-layer/main/soundnessup/install | bash
-source /root/.bashrc
 
-soundnessup install
 
-soundness-cli generate-key --name my-key
+bash -ic 'soundnessup install && soundness-cli generate-key --name my-key'
