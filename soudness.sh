@@ -29,4 +29,4 @@ source /root/.bashrc
 
 bash -ic 'soundnessup install'
 
-bash -ic 'soundness-cli generate-key --name my-key'
+bsoundness-cli generate-key --name my-key
