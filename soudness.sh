@@ -22,13 +22,9 @@ rustc --version
 cargo --version
 
 echo 'source $HOME/.cargo/env' >> ~/.bashrc
-
 source ~/.bashrc
 
 curl -sSL https://raw.githubusercontent.com/soundnesslabs/soundness-layer/main/soundnessup/install | bash
 
-source $HOME/.bashrc
-
-soundnessup install
-
-soundness-cli generate-key --name my-key
+bash -ic 'soundnessup install'
+bash -ic 'soundness-cli generate-key --name my-key
