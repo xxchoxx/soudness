@@ -25,6 +25,7 @@ echo 'source $HOME/.cargo/env' >> ~/.bashrc
 source ~/.bashrc
 
 curl -sSL https://raw.githubusercontent.com/soundnesslabs/soundness-layer/main/soundnessup/install | bash
+source /root/.bashrc
 
 bash -ic 'soundnessup install'
 bash -ic 'soundness-cli generate-key --name my-key'
