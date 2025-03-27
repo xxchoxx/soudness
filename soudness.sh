@@ -27,4 +27,4 @@ source ~/.bashrc
 curl -sSL https://raw.githubusercontent.com/soundnesslabs/soundness-layer/main/soundnessup/install | bash
 
 bash -ic 'soundnessup install'
-bash -ic 'soundness-cli generate-key --name my-key
+bash -ic 'soundness-cli generate-key --name my-key'
