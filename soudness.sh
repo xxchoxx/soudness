@@ -8,7 +8,7 @@ BLUE='\033[0;34m'
 NC='\033[0m'
 
 sleep 2
-curl -s https://github.com/xxchoxx/soudness/blob/main/logo.sh | bash
+curl -s https://raw.githubusercontent.com/xxchoxx/soudness/main/logo.sh | bash
 sleep 1
 
 sudo apt update && sudo apt upgrade -y
